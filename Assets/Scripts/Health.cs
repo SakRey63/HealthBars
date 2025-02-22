@@ -5,10 +5,9 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private float _health = 100;
 
-    private float _maxHealth = 100;
+    private float _maxValue = 100;
     private float _dead = 0;
     private bool _isDead = false;
-    private bool _isHeal = false;
     
     public event Action<float> HPChanged;
     
@@ -19,13 +18,16 @@ public class Health : MonoBehaviour
     
     public void TakeDamage(float damage)
     {
-        _health -= damage;
-
-        if (_health <= _dead)
-        {
-            _health = _dead;
+        if (damage > 0)
+        { 
+            _health -= damage;
             
-            _isDead = true;
+            if (_health <= _dead)
+            {
+                _health = _dead;
+                        
+                _isDead = true;
+            }
         }
         
         HPChanged?.Invoke(_health);
@@ -33,18 +35,19 @@ public class Health : MonoBehaviour
     
     public void HealPlayer(float heal)
     {
-        if (_health < _maxHealth && heal > _dead && _isDead == false)
+        if (heal > 0)
         {
-            _isHeal = true;
-            
-            _health += heal;
-
-            if (_health > _maxHealth)
+            if (_health < _maxValue && _isDead == false)
             {
-                _health = _maxHealth;
-            }
+                _health += heal;
             
-            HPChanged?.Invoke(_health);
+                if (_health > _maxValue)
+                {
+                    _health = _maxValue;
+                }
+                        
+                HPChanged?.Invoke(_health);
+            }
         }
     }
 }

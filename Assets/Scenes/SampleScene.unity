@@ -345,6 +345,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1714232630 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1270803126272020185, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
+  m_PrefabInstance: {fileID: 1725095997}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1714232635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714232630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d58baa52d73118408fd629c4a9c9641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _heal: 15
+  _health: {fileID: 491867598}
 --- !u!1001 &1725095997
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -353,6 +372,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 108480683788753772, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1801219130}
+    - target: {fileID: 108480683788753772, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DamagePlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 108480683788753772, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DamageButton, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 591848730268747388, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
       propertyPath: _health
       value: 
@@ -457,6 +488,18 @@ PrefabInstance:
       propertyPath: _health
       value: 
       objectReference: {fileID: 491867598}
+    - target: {fileID: 6453496644707197165, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1714232635}
+    - target: {fileID: 6453496644707197165, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HealingPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6453496644707197165, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HealthButton, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7563917546321095730, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
       propertyPath: m_Name
       value: HealthBar
@@ -472,7 +515,32 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7563917546321095730, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
       insertIndex: -1
       addedObject: {fileID: 418000375}
+    - targetCorrespondingSourceObject: {fileID: 1104534735686379577, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1801219130}
+    - targetCorrespondingSourceObject: {fileID: 1270803126272020185, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1714232635}
   m_SourcePrefab: {fileID: 100100000, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
+--- !u!1 &1801219125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1104534735686379577, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
+  m_PrefabInstance: {fileID: 1725095997}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1801219130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801219125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e24b66c4bcf1494185f066ae7c0ef6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _demage: 5
+  _health: {fileID: 491867598}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -19,7 +19,7 @@ public abstract class HealthView : MonoBehaviour
 
     protected abstract void ChangeHealthPlayer(float health);
     
-    protected Color ChangeColor(float health)
+    protected Color CreateColor(float health)
     {
         if (health > _goodHealth)
         {

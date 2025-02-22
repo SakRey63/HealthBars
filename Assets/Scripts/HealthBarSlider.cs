@@ -7,15 +7,15 @@ public class HealthBarSlider : HealthView
     
     protected override void ChangeHealthPlayer(float health)
     {
-        CreateColor(health);
+        ChangeColor(health);
         
         _slider.value = health;
     }
 
-    private void CreateColor(float health)
+    private void ChangeColor(float health)
     {
         _slider.fillRect.TryGetComponent(out Image image);
 
-        image.color = ChangeColor(health);
+        image.color = base.CreateColor(health);
     }
 }

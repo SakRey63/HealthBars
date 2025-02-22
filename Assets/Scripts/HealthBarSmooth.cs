@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class HealthBarSmooth : HealthView
 {
     [SerializeField] private Slider _slider;
-    [SerializeField] private float _speed = 70f;
+    [SerializeField] private float _delay = 0.5f;
 
     protected override void ChangeHealthPlayer(float health)
     {
@@ -14,20 +14,24 @@ public class HealthBarSmooth : HealthView
 
     private IEnumerator ChangeSmoothlyHealth(float health)
     {
-        while (_slider.value < health || _slider.value > health)
-        { 
-            _slider.value = Mathf.MoveTowards(_slider.value, health, _speed * Time.deltaTime);
+        float elapsedTime = 0;
+        
+        while (elapsedTime < _delay)
+        {
+            elapsedTime += Time.deltaTime;
             
-            CreateColor(health);
+            _slider.value = Mathf.MoveTowards(_slider.value, health, elapsedTime / _delay);
+            
+            ChangeColor(health);
             
             yield return null;
         }
     }
     
-    private void CreateColor(float health)
+    private void ChangeColor(float health)
     {
         _slider.fillRect.TryGetComponent(out Image image);
 
-        image.color = ChangeColor(health);
+        image.color = base.CreateColor(health);
     }
 }

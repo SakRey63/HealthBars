@@ -17,14 +17,14 @@ public class HealthPlayerText : HealthView
 
     protected override void ChangeHealthPlayer(float health)
     {
-        _playerHealthText.color = ChangeColor(health);
+        _playerHealthText.color = CreateColor(health);
 
         _playerHealthText.text = health.ToString();
     }
 
     private void BringMaxHealth()
     {
-        _maxHealthText.color = ChangeColor(_maxHealth);
+        _maxHealthText.color = CreateColor(_maxHealth);
         
         _maxHealthText.text = DirectSlash + _maxHealth.ToString();
     }
