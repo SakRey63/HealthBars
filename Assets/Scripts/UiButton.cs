@@ -13,6 +13,6 @@ public class UiButton : MonoBehaviour
 
     public void HealingPlayer()
     {
-        _health.Healing(_heal);
+        _health.HealPlayer(_heal);
     }
 }

@@ -1,15 +1,13 @@
 using TMPro;
 using UnityEngine;
 
-public class HealthPlayerText : HealthViu
+public class HealthPlayerText : HealthView
 {
     private const string DirectSlash = " / ";
     
     [SerializeField] private TextMeshProUGUI _playerHealthText;
     [SerializeField] private TextMeshProUGUI _maxHealthText;
-
-    private int _goodHealth = 70;
-    private int _badHealth = 30;
+    
     private int _maxHealth = 100;
 
     private void Start()

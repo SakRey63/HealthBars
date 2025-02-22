@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBarSmooth : HealthViu
+public class HealthBarSmooth : HealthView
 {
     [SerializeField] private Slider _slider;
     [SerializeField] private float _speed = 70f;

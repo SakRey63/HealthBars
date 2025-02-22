@@ -31,7 +31,7 @@ public class Health : MonoBehaviour
         HPChanged?.Invoke(_health);
     }
     
-    public void Healing(float heal)
+    public void HealPlayer(float heal)
     {
         if (_health < _maxHealth && heal > _dead && _isDead == false)
         {

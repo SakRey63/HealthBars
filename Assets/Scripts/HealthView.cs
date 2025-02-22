@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public abstract class HealthViu : MonoBehaviour
+public abstract class HealthView : MonoBehaviour
 {
     [SerializeField] private Health _health;
     
-    private int _goodHealth = 70;
-    private int _badHealth = 30;
+    private float _goodHealth = 70;
+    private float _badHealth = 30;
     
     private void OnEnable()
     {
