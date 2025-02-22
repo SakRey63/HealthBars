@@ -1,52 +1,21 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBarSlider : MonoBehaviour
+public class HealthBarSlider : HealthViu
 {
-    [SerializeField] private Health _health;
     [SerializeField] private Slider _slider;
-
-    private int _goodHealth = 70;
-    private int _badHealth = 30;
-
-    private void OnEnable()
+    
+    protected override void ChangeHealthPlayer(float health)
     {
-        _health.HPChanged += ChangeHealthPlayer;
+        CreateColor(health);
+        
+        _slider.value = health;
     }
 
-    private void OnDisable()
-    {
-        _health.HPChanged -= ChangeHealthPlayer;
-    }
-
-    private void CreateColorHealthBar(float health)
+    private void CreateColor(float health)
     {
         _slider.fillRect.TryGetComponent(out Image image);
 
-        image.color = ChangeColorImage(health);
-    }
-
-    private Color ChangeColorImage(float health)
-    {
-        if (health > _goodHealth)
-        {
-            return Color.green;
-        }
-        else if (health > _badHealth)
-        {
-            return Color.yellow;
-        }
-        else
-        {
-            return Color.red;
-        }
-    }
-    
-    private void ChangeHealthPlayer(float health)
-    {
-        CreateColorHealthBar(health);
-        
-        _slider.value = health;
+        image.color = ChangeColor(health);
     }
 }
