@@ -5,7 +5,7 @@ public class HealthBarSlider : HealthView
 {
     [SerializeField] private Slider _slider;
     
-    protected override void ChangeHealthPlayer(float health)
+    protected override void ChangeValue(float health)
     {
         ChangeColor(health);
         

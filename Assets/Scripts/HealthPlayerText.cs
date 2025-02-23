@@ -15,7 +15,7 @@ public class HealthPlayerText : HealthView
         BringMaxHealth();
     }
 
-    protected override void ChangeHealthPlayer(float health)
+    protected override void ChangeValue(float health)
     {
         _playerHealthText.color = CreateColor(health);
 

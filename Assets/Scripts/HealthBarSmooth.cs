@@ -5,9 +5,9 @@ using UnityEngine.UI;
 public class HealthBarSmooth : HealthView
 {
     [SerializeField] private Slider _slider;
-    [SerializeField] private float _delay = 0.5f;
+    [SerializeField] private float _delay = 0.7f;
 
-    protected override void ChangeHealthPlayer(float health)
+    protected override void ChangeValue(float health)
     {
         StartCoroutine(ChangeSmoothlyHealth(health));
     }

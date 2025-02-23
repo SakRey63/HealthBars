@@ -378,11 +378,15 @@ PrefabInstance:
       objectReference: {fileID: 1801219130}
     - target: {fileID: 108480683788753772, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DamagePlayer
+      value: DealDamage
       objectReference: {fileID: 0}
     - target: {fileID: 108480683788753772, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: DamageButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 591848730268747388, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
+      propertyPath: _delay
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 591848730268747388, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
       propertyPath: _health
@@ -488,13 +492,37 @@ PrefabInstance:
       propertyPath: _health
       value: 
       objectReference: {fileID: 491867598}
+    - target: {fileID: 3802342752773038714, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802342752773038714, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802342752773038714, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802342752773038714, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802342752773038714, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1820
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802342752773038714, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -980
+      objectReference: {fileID: 0}
     - target: {fileID: 6453496644707197165, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1714232635}
     - target: {fileID: 6453496644707197165, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HealingPlayer
+      value: PerformHealing
       objectReference: {fileID: 0}
     - target: {fileID: 6453496644707197165, guid: 9ea36b71e2fb2824d905926ac0bb9b56, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

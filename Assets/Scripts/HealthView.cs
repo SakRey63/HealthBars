@@ -9,15 +9,15 @@ public abstract class HealthView : MonoBehaviour
     
     private void OnEnable()
     {
-        _health.HPChanged += ChangeHealthPlayer;
+        _health.ValueChanged += ChangeValue;
     }
 
     private void OnDisable()
     {
-        _health.HPChanged -= ChangeHealthPlayer;
+        _health.ValueChanged -= ChangeValue;
     }
 
-    protected abstract void ChangeHealthPlayer(float health);
+    protected abstract void ChangeValue(float health);
     
     protected Color CreateColor(float health)
     {

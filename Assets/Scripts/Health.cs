@@ -9,11 +9,11 @@ public class Health : MonoBehaviour
     private float _dead = 0;
     private bool _isDead = false;
     
-    public event Action<float> HPChanged;
+    public event Action<float> ValueChanged;
     
     private void Start()
     {
-        HPChanged?.Invoke(_health);
+        ValueChanged?.Invoke(_health);
     }
     
     public void TakeDamage(float damage)
@@ -30,7 +30,7 @@ public class Health : MonoBehaviour
             }
         }
         
-        HPChanged?.Invoke(_health);
+        ValueChanged?.Invoke(_health);
     }
     
     public void HealPlayer(float heal)
@@ -46,7 +46,7 @@ public class Health : MonoBehaviour
                     _health = _maxValue;
                 }
                         
-                HPChanged?.Invoke(_health);
+                ValueChanged?.Invoke(_health);
             }
         }
     }
