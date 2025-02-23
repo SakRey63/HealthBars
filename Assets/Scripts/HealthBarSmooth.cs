@@ -9,10 +9,10 @@ public class HealthBarSmooth : HealthView
 
     protected override void ChangeValue(float health)
     {
-        StartCoroutine(ChangeSmoothlyHealth(health));
+        StartCoroutine(ChangeSmoothlyValue(health));
     }
 
-    private IEnumerator ChangeSmoothlyHealth(float health)
+    private IEnumerator ChangeSmoothlyValue(float health)
     {
         float elapsedTime = 0;
         
